@@ -1,0 +1,36 @@
+<html>
+  <head>
+  		<title>user_show</title>
+		<meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/app/static/css/styles.css" type="text/css">
+  </head>
+  <body>
+  	<div class="row"> 
+  	  		<div class="col-md-2 col-md-offset-9" class="active">
+			<nav class="navbar navbar-light bg-faded">
+				<ul class="nav navbar-nav">
+				<li class="nav-item active">
+						<a class="nav-link" href="/dashboard">Dashboard </a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="/logout">Logout <span class="sr-only">(current)</span></a>
+					</li>
+					
+				</ul>
+		</nav>
+		</div>
+		<hr>
+		<div class="col-md-9 col-md-offset-2" class="active">
+	
+		<p> Posted by {{user_info['name']}}</p>
+		<p>Count {{user_info['count']}}</p>
+
+		
+		{%for quote in quotes%}
+			<p>{{quote['author']}}:{{quote['quote']}}</p>
+		{%endfor%}
+		
+  	</div>
+  </body>
+  </html>
